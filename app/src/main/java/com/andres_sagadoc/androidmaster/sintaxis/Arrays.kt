@@ -1,4 +1,4 @@
-package com.andres_sagadoc.androidmaster
+package com.andres_sagadoc.androidmaster.sintaxis
 
 fun main() {
     val weekDays = arrayOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")

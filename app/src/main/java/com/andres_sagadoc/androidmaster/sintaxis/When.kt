@@ -1,4 +1,4 @@
-package com.andres_sagadoc.androidmaster
+package com.andres_sagadoc.androidmaster.sintaxis
 
 fun main() {
     getMonthWithIF(125)

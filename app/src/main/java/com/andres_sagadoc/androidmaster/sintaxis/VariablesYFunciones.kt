@@ -1,4 +1,4 @@
-package com.andres_sagadoc.androidmaster
+package com.andres_sagadoc.androidmaster.sintaxis
 
 val age: Int = 30
 
