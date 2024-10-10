@@ -7,7 +7,7 @@ fun main() {
 
     // Tamaños
     println("Tamaño del array = ${weekDays.size}")
-    if(weekDays.size >= 8) println(weekDays[7])
+    if (weekDays.size >= 8) println(weekDays[7])
     else println("No hay más valores en el array")
 
     // Modificar valores
@@ -15,7 +15,7 @@ fun main() {
     println(weekDays[0])
 
     // Bluces
-    for (position in weekDays.indices){
+    for (position in weekDays.indices) {
         print("Posicion $position -> ")
         println(weekDays[position])
     }
@@ -24,7 +24,7 @@ fun main() {
         println("Posición $position contiene $value")
     }
 
-    for (day in weekDays){
+    for (day in weekDays) {
         println("Ahora es $day")
     }
 }
