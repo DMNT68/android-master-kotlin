@@ -1,8 +1,8 @@
 # Android con kotlin
-- Fundamentos
-  - variables y tipos
+- Fundamentos:
+  - Valores, Variables y Tipos
   - Funciones
   - If Else When
   - Arrays
-  - listas
-- Ejecicios
+  - Listas
+- Ejercicios
