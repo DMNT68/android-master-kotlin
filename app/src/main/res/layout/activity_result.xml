@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".FirstApp.ResultActivity">
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/tvTitleResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Esto es un ejemplo"
