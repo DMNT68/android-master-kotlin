@@ -8,6 +8,7 @@
 - ## Ejercicios
 - ## Apps:
   ![Pantalla principall](docs/captures/menu.png)
+  <img src="docs/captures/menu.png" alt="Descripción de la imagen" width="300" height="200">
   - ### SALUDAPP
     ![Pantalla principall](docs/captures/saludapp.png)
   - ### IMC
