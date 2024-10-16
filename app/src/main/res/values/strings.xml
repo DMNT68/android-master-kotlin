@@ -14,7 +14,7 @@
     <string name="reCalculate">Volver a calcular</string>
     <string name="description_underweight">Su peso esta en la categoría de Bajo peso para adultos de su estatura.</string>
     <string name="description_healthy_weight">Su peso esta en la categoría de Peso saludable para adultos de su estatura.</string>
-    <string name="description_overweight">Su Su peso esta en la categoría de Sobrepeso para adultos de su estatura.</string>
+    <string name="description_overweight">Su peso esta en la categoría de Sobrepeso para adultos de su estatura.</string>
     <string name="description_obesidad">Su peso esta en la categoría de Peso Obesidad para adultos de su estatura.</string>
     <string name="error">Error</string>
     <string name="underweight">Bajo peso</string>
