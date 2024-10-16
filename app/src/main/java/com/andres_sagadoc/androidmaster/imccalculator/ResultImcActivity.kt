@@ -63,25 +63,29 @@ class ResultImcActivity : AppCompatActivity() {
             in 0.00..18.50 -> {
                 range = getString(R.string.underweight)
                 description = getString(R.string.description_underweight)
+                tvRange.setTextColor(getColor(R.color.underweight))
             }
             in 18.51..24.99 -> {
                 range = getString(R.string.healthy_weight)
                 description = getString(R.string.description_healthy_weight)
-
+                tvRange.setTextColor(getColor(R.color.healthy_weight))
             }
             in 25.00..29.99 -> {
                 range = getString(R.string.overweight)
                 description = getString(R.string.description_overweight)
+                tvRange.setTextColor(getColor(R.color.overweight))
             }
             in 30.00..99.00 -> {
                 range = getString(R.string.description_obesity)
                 description = getString(R.string.description_obesity)
+                tvRange.setTextColor(getColor(R.color.obesity))
             }
             else -> {
                 range = getString(R.string.error)
                 description = getString(R.string.error)
                 imc = 0.0
                 tvImc.text = "$imc"
+                tvRange.setTextColor(getColor(R.color.obesity))
             }
         }
         tvRange.text = range
