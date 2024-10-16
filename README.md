@@ -7,9 +7,8 @@
   - Listas
 - ## Ejercicios
 - ## Apps:
-  ![Pantalla principall](docs/captures/menu.png)
-  <img src="docs/captures/menu.png" alt="Descripción de la imagen" height="500">
+  <img src="docs/captures/menu.png" alt="Pantalla principal" height="500">
   - ### SALUDAPP
-    ![Pantalla principall](docs/captures/saludapp.png)
+    <img src="docs/captures/saludapp.png" alt="Pantalla saludapp" height="500">
   - ### IMC
-    ![Pantalla principall](docs/captures/imc.png)
+    <img src="docs/captures/imc.png" alt="Pantalla imc app" height="500">
