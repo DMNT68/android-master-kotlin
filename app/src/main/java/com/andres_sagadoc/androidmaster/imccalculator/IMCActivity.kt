@@ -113,8 +113,13 @@ class IMCActivity : AppCompatActivity() {
         val df = DecimalFormat("#.##")
         val imc = currentWeight / (currentHeight.toDouble() / 100 * currentHeight.toDouble() / 100)
         val result = df.format(imc).toDouble()
-        Log.i("IMC", "El IMC es $result")
-        Toast.makeText(this, "IMC: $result", Toast.LENGTH_SHORT).show()
+        navigateToResult(result)
+    }
+
+    private fun navigateToResult(result: Double) {
+        val intent = Intent(this, ResultImcActivity::class.java)
+        intent.putExtra(IMC_KEY, result)
+        startActivity(intent)
     }
 
     private fun setAge() {
