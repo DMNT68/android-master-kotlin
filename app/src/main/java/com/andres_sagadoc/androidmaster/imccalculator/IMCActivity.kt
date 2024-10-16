@@ -36,6 +36,10 @@ class IMCActivity : AppCompatActivity() {
     private lateinit var tvWeight: TextView
     private lateinit var btnCalculate: Button
 
+    companion object {
+        const val IMC_KEY = "IMC"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // enableEdgeToEdge()
