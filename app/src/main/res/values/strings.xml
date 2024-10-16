@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Android master</string>
+    <string name="male">Hombre</string>
+    <string name="female">Mujer</string>
+    <string name="title_imc">Calculadora de IMC</string>
+    <string name="height">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="age">Edad</string>
+    <string name="calculate">Calcular</string>
 </resources>
