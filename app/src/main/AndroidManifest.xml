@@ -13,10 +13,10 @@
         android:theme="@style/Theme.AndroidMaster"
         tools:targetApi="31">
         <activity
-            android:name=".FirstApp.ResultActivity"
+            android:name=".imccalculator.IMCActivity"
             android:exported="false" />
         <activity
-            android:name=".FirstApp.FirstAppActivity"
+            android:name=".MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FirstApp.ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirstApp.FirstAppActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
