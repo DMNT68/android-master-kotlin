@@ -76,7 +76,7 @@ class ResultImcActivity : AppCompatActivity() {
                 tvRange.setTextColor(getColor(R.color.overweight))
             }
             in 30.00..99.00 -> {
-                range = getString(R.string.description_obesity)
+                range = getString(R.string.obesity)
                 description = getString(R.string.description_obesity)
                 tvRange.setTextColor(getColor(R.color.obesity))
             }
