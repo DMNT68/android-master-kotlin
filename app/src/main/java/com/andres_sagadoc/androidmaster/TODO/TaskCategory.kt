@@ -4,5 +4,6 @@ sealed class TaskCategory {
     object Business : TaskCategory()
     object Personal : TaskCategory()
     object Work : TaskCategory()
+    object Other : TaskCategory()
 
 }
