@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/background_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstApp.ResultActivity">
@@ -10,9 +11,8 @@
         android:id="@+id/tvTitleResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Esto es un ejemplo"
+        tools:text="Hola nombre"
         android:textSize="35sp"
-        android:textColor="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

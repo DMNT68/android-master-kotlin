@@ -4,8 +4,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="10dp"
+    android:background="@color/background_app"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MenuActivity">
 
     <Button
@@ -13,13 +14,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="SaludApp" />
+        android:text="SaludApp"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnIMC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="IMC" />
+        android:text="IMC"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnTodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="TODO List"
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>

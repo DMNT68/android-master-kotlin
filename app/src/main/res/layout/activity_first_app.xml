@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/background_app"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstApp.FirstAppActivity">
@@ -17,26 +18,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginTop="64dp"
+        tools:ignore="HardcodedText" />
 
-        app:layout_goneMarginTop="64dp" />
-
-    <androidx.appcompat.widget.AppCompatEditText
+    <EditText
+        style="@style/CustomEditTextUnderline"
         android:id="@+id/etName"
-        maxlines="1"
+        android:autofillHints="Ejm: Nombre"
+        android:inputType="text"
+        android:maxLines="1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:singleLine="true"
         app:layout_constraintBottom_toTopOf="@+id/btnStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="LabelFor" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/purple_200"
-        android:text="Empezar"
+        android:text="@string/btn_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
