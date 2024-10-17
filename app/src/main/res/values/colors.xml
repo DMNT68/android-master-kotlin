@@ -8,11 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="background_component">#1D1E33</color>
-    <color name="background_component_selected">#FF111328</color>
-    <color name="background_app">#0E0B20</color>
+    <color name="background_component">#EBE4F2</color>
+    <color name="background_component_selected">#BDA4DC</color>
+    <color name="background_app">#FFFFFF</color>
     <color name="background_button">#EB1555</color>
-    <color name="title_text">#FF8D8E98</color>
+    <color name="title_text">#2C2C2E</color>
     <color name="background_fab">#FF6200EE</color>
     <color name="fab_icon">#FFFFFF</color>
 
