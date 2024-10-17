@@ -1,6 +1,8 @@
 package com.andres_sagadoc.androidmaster.imccalculator
 
 import android.content.Intent
+import android.content.res.Configuration
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -42,6 +44,8 @@ class IMCActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // enableEdgeToEdge()
         setContentView(R.layout.activity_imcactivity)
+        enableDarkModeActionBar()
+        changeNameActionBar(getString(R.string.imc_title))
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -161,6 +165,20 @@ class IMCActivity : AppCompatActivity() {
         setWeigth()
         setAge()
         setHeight()
+    }
+
+    private fun enableDarkModeActionBar() {
+        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when (currentNightMode) {
+            Configuration.UI_MODE_NIGHT_YES -> {
+                // Modo oscuro
+                supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.background_app)))
+            }
+        }
+    }
+
+    private fun changeNameActionBar(name: String) {
+        supportActionBar?.title = name
     }
 
 }
