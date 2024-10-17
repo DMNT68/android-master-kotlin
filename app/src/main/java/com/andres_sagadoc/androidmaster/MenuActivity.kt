@@ -33,7 +33,7 @@ class MenuActivity : AppCompatActivity() {
         btnTODO.setOnClickListener { navigateToTODO() }
     }
 
-    private fun navigateToTODO(){
+    private fun navigateToTODO() {
         val intent = Intent(this, TodoActivity::class.java)
         startActivity(intent)
     }
@@ -43,7 +43,7 @@ class MenuActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun navigateToSaludApp(){
+    private fun navigateToSaludApp() {
         val intent = Intent(this, FirstAppActivity::class.java)
         startActivity(intent)
     }
