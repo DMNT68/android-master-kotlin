@@ -13,4 +13,9 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="CustomEditTextUnderline">
+        <!-- Color de la línea cuando el EditText no está enfocado -->
+        <item name="android:backgroundTint">@color/purple_200</item>
+    </style>
 </resources>
