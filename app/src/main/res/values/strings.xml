@@ -32,4 +32,5 @@
 
     <!--- TodoAPP -->
     <string name="todo_app">TODO</string>
+    <string name="todo_title">Cosas por hacer</string>
 </resources>
