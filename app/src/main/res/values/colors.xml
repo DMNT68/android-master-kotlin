@@ -17,9 +17,8 @@
     <color name="text_btn">@color/white</color>
     <color name="text">@color/black</color>
 
-    <color name="healthy_weight">#5BED61</color>
-    <color name="underweight">#FFEB3B</color>
-    <color name="overweight">#FF5722</color>
-    <color name="obesity">#E91E63</color>
-
+    <color name="healthy_weight">#4CAF50</color>  <!-- Verde saludable con mejor contraste -->
+    <color name="underweight">#FFC107</color>    <!-- Amarillo dorado, más cálido y visible -->
+    <color name="overweight">#FF7043</color>     <!-- Naranja suave con mejor legibilidad -->
+    <color name="obesity">#D81B60</color>        <!-- Rosa más oscuro, más equilibrado visualmente -->
 </resources>
