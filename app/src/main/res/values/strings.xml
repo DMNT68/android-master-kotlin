@@ -22,4 +22,8 @@
     <string name="overweight">Sobrepeso</string>
     <string name="obesity">Obesidad</string>
     <string name="btn_start">Empezar</string>
+    <string name="imc_title">Caculadora IMC</string>
+    <string name="result_imc">Resultado IMC\n</string>
+    <string name="result_first_app">Resultado</string>
+    <string name="first_app_name">SaludApp</string>
 </resources>
