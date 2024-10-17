@@ -5,7 +5,7 @@
     <color name="background_app">#0E0B20</color>
     <color name="background_button">#EB1555</color>
     <color name="title_text">#FF8D8E98</color>
-    <color name="background_fab">#FFBB86FC</color>
-    <color name="fab_icon">#FF000000</color>
-
+    <color name="background_btn">@color/purple_200</color>
+    <color name="text_btn">@color/black</color>
+    <color name="text">@color/white</color>
 </resources>
