@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- IMC app colors -->
     <color name="background_component">#F0F0F0</color>
     <color name="background_component_selected">#DBD4FF</color>
     <color name="background_app">#FFFFFF</color>
@@ -16,6 +17,10 @@
     <color name="background_btn">@color/purple_500</color>
     <color name="text_btn">@color/white</color>
     <color name="text">@color/black</color>
+    <color name="healthy_weight">#4CAF50</color>
+    <color name="underweight">#FFC107</color>
+    <color name="overweight">#FF7043</color>
+    <color name="obesity">#D81B60</color>
 
     <color name="healthy_weight">#4CAF50</color>  <!-- Verde saludable con mejor contraste -->
     <color name="underweight">#FFC107</color>    <!-- Amarillo dorado, más cálido y visible -->
