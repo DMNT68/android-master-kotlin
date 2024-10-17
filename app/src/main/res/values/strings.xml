@@ -15,11 +15,11 @@
     <string name="description_underweight">Su peso esta en la categoría de Bajo peso para adultos de su estatura.</string>
     <string name="description_healthy_weight">Su peso esta en la categoría de Peso saludable para adultos de su estatura.</string>
     <string name="description_overweight">Su peso esta en la categoría de Sobrepeso para adultos de su estatura.</string>
-    <string name="description_obesidad">Su peso esta en la categoría de Peso Obesidad para adultos de su estatura.</string>
+    <string name="description_obesity">Su peso esta en la categoría de Peso Obesidad para adultos de su estatura.</string>
     <string name="error">Error</string>
     <string name="underweight">Bajo peso</string>
     <string name="healthy_weight">Peso saludable</string>
     <string name="overweight">Sobrepeso</string>
-    <string name="description_obesity">Obesidad</string>
+    <string name="obesity">Obesidad</string>
     <string name="btn_start">Empezar</string>
 </resources>
