@@ -34,7 +34,7 @@
                 android:layout_marginBottom="8dp"
                 android:contentDescription="@string/male"
                 android:src="@drawable/ic_male"
-                app:tint="@color/white" />
+                app:tint="@color/text" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                 android:layout_marginBottom="8dp"
                 android:contentDescription="@string/female"
                 android:src="@drawable/ic_female"
-                app:tint="@color/white" />
+                app:tint="@color/text" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="4dp"
                 android:text="120 cm"
-                android:textColor="@color/white"
+                android:textColor="@color/text"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
@@ -121,10 +121,10 @@
                 android:id="@+id/sliderHeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/slider"
                 android:stepSize="1"
                 android:valueFrom="120"
-                android:valueTo="200"
-                android:contentDescription="@string/slider"/>
+                android:valueTo="200" />
 
         </LinearLayout>
 
@@ -161,8 +161,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="60"
+                android:textStyle="bold"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/text"
                 android:textSize="36sp"
                 tools:ignore="HardcodedText" />
 
@@ -177,21 +178,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/background_fab"
+                    android:backgroundTint="@color/background_btn"
                     android:contentDescription="@string/substract"
                     android:src="@drawable/ic_substract"
                     app:borderWidth="0dp"
-                    app:tint="@color/fab_icon" />
+                    app:tint="@color/text_btn" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnPlusWeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/background_fab"
+                    android:backgroundTint="@color/background_btn"
                     android:contentDescription="@string/add"
                     android:src="@drawable/ic_plus"
                     app:borderWidth="0dp"
-                    app:tint="@color/fab_icon" />
+                    app:tint="@color/text_btn" />
             </LinearLayout>
 
         </LinearLayout>
@@ -227,8 +228,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25"
+                android:textStyle="bold"
                 android:textAllCaps="true"
-                android:textColor="@color/white"
+                android:textColor="@color/text"
                 android:textSize="36sp"
                 tools:ignore="HardcodedText" />
 
@@ -243,21 +245,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/background_fab"
+                    android:backgroundTint="@color/background_btn"
                     android:contentDescription="@string/substract"
                     android:src="@drawable/ic_substract"
                     app:borderWidth="0dp"
-                    app:tint="@color/fab_icon" />
+                    app:tint="@color/text_btn" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btnPlusAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/background_fab"
+                    android:backgroundTint="@color/background_btn"
                     android:contentDescription="@string/add"
                     android:src="@drawable/ic_plus"
                     app:borderWidth="0dp"
-                    app:tint="@color/fab_icon" />
+                    app:tint="@color/text_btn" />
             </LinearLayout>
 
         </LinearLayout>
@@ -269,6 +271,8 @@
         android:layout_height="80dp"
         android:text="@string/calculate"
         android:textSize="22sp"
+        android:textColor="@color/text_btn"
+        android:backgroundTint="@color/background_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
