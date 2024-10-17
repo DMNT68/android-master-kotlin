@@ -1,4 +1,5 @@
 <resources>
+    <!--- IMC APP -->
     <string name="app_name">Android master</string>
     <string name="male">Hombre</string>
     <string name="female">Mujer</string>
@@ -25,6 +26,10 @@
     <string name="imc_title">Caculadora IMC</string>
     <string name="result_imc">Resultado IMC\n</string>
     <string name="result_first_app">Resultado</string>
+
+    <!--- SALUDO APP -->
     <string name="first_app_name">SaludApp</string>
+
+    <!--- TodoAPP -->
     <string name="todo_app">TODO</string>
 </resources>
