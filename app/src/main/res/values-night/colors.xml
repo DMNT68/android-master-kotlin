@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- IMC app colors -->
     <color name="background_component">#1D1E33</color>
     <color name="background_component_selected">#FF111328</color>
     <color name="background_app">#0E0B20</color>
@@ -8,9 +9,8 @@
     <color name="background_btn">@color/purple_200</color>
     <color name="text_btn">@color/black</color>
     <color name="text">@color/white</color>
-
-    <color name="healthy_weight">#00C853</color> <!-- Verde más oscuro, sigue siendo visible en modo oscuro -->
-    <color name="underweight">#FFD600</color> <!-- Amarillo oscuro con mejor contraste en fondo oscuro -->
-    <color name="overweight">#FF8A50</color> <!-- Naranja más claro para destacar en el fondo oscuro -->
-    <color name="obesity">#FF4081</color> <!-- Rosa más brillante para un mejor contraste -->
+    <color name="healthy_weight">#00C853</color>
+    <color name="underweight">#FFD600</color>
+    <color name="overweight">#FF8A50</color>
+    <color name="obesity">#FF4081</color>
 </resources>
