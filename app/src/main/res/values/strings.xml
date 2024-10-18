@@ -35,4 +35,10 @@
     <string name="todo_title">Cosas por hacer</string>
     <string name="todo_category">Categorias</string>
     <string name="todo_task_title">Tareas</string>
+    <string name="todo_hint">Añade una tarea</string>
+    <string name="todo_business">Negocios</string>
+    <string name="todo_personal">Personal</string>
+    <string name="todo_work">Trabajo</string>
+    <string name="todo_other">Otro</string>
+    <string name="text_btn_add_task">Crear tarea</string>
 </resources>
