@@ -34,4 +34,5 @@
     <string name="todo_app">TODO</string>
     <string name="todo_title">Cosas por hacer</string>
     <string name="todo_category">Categorias</string>
+    <string name="todo_task_title">Tareas</string>
 </resources>
