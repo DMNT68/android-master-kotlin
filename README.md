@@ -5,7 +5,7 @@
     - Funciones
     - If Else When
     - Arrays
-    - Listas
+    - ListasonItemTaskSelected
 - ## Ejercicios
 - ## Apps: 
     <img src="docs/captures/menu.png" alt="Pantalla principal" height="500">
@@ -15,3 +15,6 @@
     
     - ### IMC 
         <img src="docs/captures/imc.png" alt="Pantalla imc app" height="500">
+    
+    - ### TODO App 
+        <img src="docs/captures/todo.png" alt="Pantalla imc app" height="500">
