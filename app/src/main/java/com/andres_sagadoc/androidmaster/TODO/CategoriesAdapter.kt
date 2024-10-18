@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andres_sagadoc.androidmaster.R
 
 // Permite pintar las listas y mostrarlas en pantalla
-class CategoriesAdapter(private val categories: List<TaskCategory>) :
+class CategoriesAdapter(private val categories: List<TaskCategory>, private val onItemCategorySelected: (Int) -> Unit) :
     RecyclerView.Adapter<CategoriesViewHolder>() {
 
     // Crear una vista para cada elemento
@@ -21,6 +21,6 @@ class CategoriesAdapter(private val categories: List<TaskCategory>) :
 
     // Renderiza cada uno de los elementos en la lista
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
-        holder.render(categories[position])
+        holder.render(categories[position], onItemCategorySelected)
     }
 }
