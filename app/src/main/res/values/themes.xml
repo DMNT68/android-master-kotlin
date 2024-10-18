@@ -32,6 +32,13 @@
         <!-- Color de la línea cuando el EditText no está enfocado -->
         <item name="android:backgroundTint">@color/purple_500</item>
     </style>
+    
+    <style name="TodoSubtitle">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/todo_subtitle_text</item>
+        <item name="android:layout_marginHorizontal">32dp</item>
+        <item name="android:layout_marginVertical">8dp</item>
+    </style>
 
 
 </resources>
