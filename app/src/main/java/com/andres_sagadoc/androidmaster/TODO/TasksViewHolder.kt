@@ -1,6 +1,7 @@
 package com.andres_sagadoc.androidmaster.TODO
 
 import android.content.res.ColorStateList
+import android.graphics.Paint
 import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
@@ -15,6 +16,13 @@ class TasksViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun render(task: Task) {
         tvTask.text = task.name
+        if (task.isSelected) {
+            tvTask.paintFlags = tvTask.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+        } else {
+            tvTask.paintFlags = tvTask.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+        }
+
+        cbTask.isChecked = task.isSelected
 
         when (task.category) {
             TaskCategory.Business -> cbTask.buttonTintList = ColorStateList.valueOf(
