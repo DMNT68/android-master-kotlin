@@ -59,6 +59,7 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="32dp"
         android:backgroundTint="@color/todo_background_btn"
+        android:contentDescription="@string/todo_text_btn_add_task"
         android:src="@android:drawable/ic_input_add"
         app:borderWidth="0dp"
         app:fabSize="normal"

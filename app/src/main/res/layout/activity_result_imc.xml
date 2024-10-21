@@ -83,7 +83,7 @@
 
     <Button
         android:id="@+id/btnReCalculate"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:text="@string/reCalculate"
         android:textSize="22sp"

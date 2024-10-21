@@ -179,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:backgroundTint="@color/background_btn"
-                    android:contentDescription="@string/substract"
+                    android:contentDescription="@string/substract_weight"
                     android:src="@drawable/ic_substract"
                     app:borderWidth="0dp"
                     app:tint="@color/text_btn" />
@@ -189,7 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/background_btn"
-                    android:contentDescription="@string/add"
+                    android:contentDescription="@string/add_weight"
                     android:src="@drawable/ic_plus"
                     app:borderWidth="0dp"
                     app:tint="@color/text_btn" />
@@ -246,7 +246,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:backgroundTint="@color/background_btn"
-                    android:contentDescription="@string/substract"
+                    android:contentDescription="@string/substract_age"
                     android:src="@drawable/ic_substract"
                     app:borderWidth="0dp"
                     app:tint="@color/text_btn" />
@@ -256,7 +256,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/background_btn"
-                    android:contentDescription="@string/add"
+                    android:contentDescription="@string/add_age"
                     android:src="@drawable/ic_plus"
                     app:borderWidth="0dp"
                     app:tint="@color/text_btn" />
@@ -267,7 +267,7 @@
 
     <Button
         android:id="@+id/btnCalculate"
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="80dp"
         android:text="@string/calculate"
         android:textSize="22sp"

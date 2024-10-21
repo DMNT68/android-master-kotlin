@@ -8,8 +8,10 @@
     <string name="weight">Peso</string>
     <string name="age">Edad</string>
     <string name="calculate">Calcular</string>
-    <string name="add">Sumar\n</string>
-    <string name="substract">Restar</string>
+    <string name="add_age">Sumar edad</string>
+    <string name="add_weight">Sumar peso</string>
+    <string name="substract_age">Restar edad</string>
+    <string name="substract_weight">Restar peso</string>
     <string name="slider">Slider edad</string>
     <string name="result">Tu Resultado</string>
     <string name="reCalculate">Volver a calcular</string>
@@ -40,5 +42,6 @@
     <string name="todo_personal">Personal</string>
     <string name="todo_work">Trabajo</string>
     <string name="todo_other">Otro</string>
-    <string name="text_btn_add_task">Crear tarea</string>
+    <string name="todo_text_btn_add_task">Crear tarea</string>
+    <string name="hint_name">Pulsa para escribir</string>
 </resources>
