@@ -11,9 +11,13 @@ import com.andres_sagadoc.androidmaster.R
 import com.andres_sagadoc.androidmaster.superheroapp.SuperHeroList.Companion.ID_SUPER_HERO
 
 class DetailSuperHeroActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDetailSuperHeroBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        binding = ActivityDetailSuperHeroBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //enableEdgeToEdge()
         enableDarkModeActionBar()
         changeNameActionBar(getString(R.string.detail_superhero))
