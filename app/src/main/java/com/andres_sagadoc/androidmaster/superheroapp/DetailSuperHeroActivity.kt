@@ -1,8 +1,7 @@
 package com.andres_sagadoc.androidmaster.superheroapp
 
-import android.content.res.Configuration
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -25,15 +24,7 @@ class DetailSuperHeroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailSuperHeroBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //enableEdgeToEdge()
-        enableDarkModeActionBar()
-        changeNameActionBar(getString(R.string.detail_superhero))
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        enableEdgeToEdge()
 
         val idSuperHero: String = intent.getStringExtra(ID_SUPER_HERO).orEmpty()
         getSuperHeroInformation(idSuperHero)
@@ -62,19 +53,5 @@ class DetailSuperHeroActivity : AppCompatActivity() {
             .baseUrl("https://www.superheroapi.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-    }
-
-    private fun enableDarkModeActionBar() {
-        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-        when (currentNightMode) {
-            Configuration.UI_MODE_NIGHT_YES -> {
-                // Modo oscuro
-                supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.background_app)))
-            }
-        }
-    }
-
-    private fun changeNameActionBar(name: String) {
-        supportActionBar?.title = name
     }
 }
