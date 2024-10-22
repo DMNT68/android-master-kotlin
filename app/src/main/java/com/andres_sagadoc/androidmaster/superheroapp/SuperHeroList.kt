@@ -25,6 +25,10 @@ class SuperHeroList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        // IU setting
+        enableDarkModeActionBar()
+        changeNameActionBar(getString(R.string.superHeroList))
+
         binding = ActivitySuperHeroListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -65,5 +69,19 @@ class SuperHeroList : AppCompatActivity() {
             .baseUrl("https://www.superheroapi.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    private fun enableDarkModeActionBar() {
+        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        when (currentNightMode) {
+            Configuration.UI_MODE_NIGHT_YES -> {
+                // Modo oscuro
+                supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.background_app)))
+            }
+        }
+    }
+
+    private fun changeNameActionBar(name: String) {
+        supportActionBar?.title = name
     }
 }
