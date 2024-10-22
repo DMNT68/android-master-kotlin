@@ -1,5 +1,6 @@
 package com.andres_sagadoc.androidmaster.superheroapp
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -24,6 +25,10 @@ class SuperHeroList : AppCompatActivity() {
     private lateinit var retrofit: Retrofit
 
     private lateinit var superHeroAdapter: SuperHeroAdapter
+
+    companion object {
+        const val ID_SUPER_HERO = "ID_SUPER_HERO"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +58,7 @@ class SuperHeroList : AppCompatActivity() {
             override fun onQueryTextChange(p0: String?): Boolean = false
         })
 
-        superHeroAdapter = SuperHeroAdapter()
+        superHeroAdapter = SuperHeroAdapter { navigateToDetailSuperHero(it) }
         binding.rvSuperHero.setHasFixedSize(true)
         binding.rvSuperHero.layoutManager = LinearLayoutManager(this)
         binding.rvSuperHero.adapter = superHeroAdapter
@@ -86,6 +91,12 @@ class SuperHeroList : AppCompatActivity() {
             .baseUrl("https://www.superheroapi.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    private fun navigateToDetailSuperHero(id: String) {
+        val intent = Intent(this, DetailSuperHeroActivity::class.java)
+        intent.putExtra(ID_SUPER_HERO, id)
+        startActivity(intent)
     }
 
     private fun enableDarkModeActionBar() {

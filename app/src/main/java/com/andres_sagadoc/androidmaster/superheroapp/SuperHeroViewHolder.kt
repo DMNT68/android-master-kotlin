@@ -7,10 +7,9 @@ import com.squareup.picasso.Picasso
 
 class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val binding = ItemSuperheroBinding.bind(view)
-    fun bind(superHeroResponse: SuperHeroResponse) {
+    fun bind(superHeroResponse: SuperHeroResponse, onItemSelected: (String) -> Unit) {
         binding.tvSuperHeroName.text = superHeroResponse.name
-        Picasso.get()
-            .load(superHeroResponse.image.url)
-            .into(binding.ivSuperHero)
+        Picasso.get().load(superHeroResponse.image.url).into(binding.ivSuperHero)
+        binding.root.setOnClickListener({onItemSelected(superHeroResponse.superHeroId)})
     }
 }
