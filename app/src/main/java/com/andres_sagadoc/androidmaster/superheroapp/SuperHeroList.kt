@@ -24,7 +24,7 @@ class SuperHeroList : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        // enableEdgeToEdge()
         // IU setting
         enableDarkModeActionBar()
         changeNameActionBar(getString(R.string.superHeroList))
