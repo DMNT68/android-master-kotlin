@@ -48,15 +48,6 @@ data class Connections(
     val relatives: String
 )
 
-data class Powerstats(
-    val intelligence: String,
-    val strength: String,
-    val speed: String,
-    val durability: String,
-    val power: String,
-    val combat: String
-)
-
 data class Work(
     val occupation: String,
     val base: String
