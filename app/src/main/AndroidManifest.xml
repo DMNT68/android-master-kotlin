@@ -15,12 +15,15 @@
         android:theme="@style/Theme.AndroidMaster"
         tools:targetApi="31">
         <activity
+            android:name=".superheroapp.DetailSuperHeroActivity"
+            android:exported="false" />
+        <activity
             android:name=".superheroapp.SuperHeroList"
             android:exported="false" />
         <activity
             android:name=".TODO.TodoActivity"
             android:exported="false"
-            android:theme="@style/Theme.TODOApp"/>
+            android:theme="@style/Theme.TODOApp" />
         <activity
             android:name=".imccalculator.ResultImcActivity"
             android:exported="false" />
