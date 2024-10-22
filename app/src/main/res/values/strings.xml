@@ -44,4 +44,5 @@
     <string name="todo_other">Otro</string>
     <string name="todo_text_btn_add_task">Crear tarea</string>
     <string name="hint_name">Pulsa para escribir</string>
+    <string name="superHeroList">Super Heroes</string>
 </resources>
