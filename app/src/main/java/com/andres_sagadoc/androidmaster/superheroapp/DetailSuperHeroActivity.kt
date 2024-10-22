@@ -29,9 +29,34 @@ class DetailSuperHeroActivity : AppCompatActivity() {
             insets
         }
 
-        val idSuperHero: String = intent.extras?.getString(ID_SUPER_HERO).orEmpty()
+        val idSuperHero: String = intent.getStringExtra(ID_SUPER_HERO).orEmpty()
+        getSuperHeroInformation(idSuperHero)
     }
 
+    private fun getSuperHeroInformation(id: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val superHeroDetail: Response<SuperHeroDetailResponse> =
+                getRetrofit().create(ApiService::class.java).getSuperHeroDetail(id)
+            if (superHeroDetail.body() != null) {
+                runOnUiThread {
+                    createUI(superHeroDetail.body()!!)
+                }
+            }
+        }
+    }
+
+    private fun createUI(superHero: SuperHeroDetailResponse) {
+        Picasso.get().load(superHero.image.url).into(binding.ivSuperHero)
+        binding.tvSuperHeroName.text = superHero.name
+    }
+
+    private fun getRetrofit(): Retrofit {
+        return Retrofit
+            .Builder()
+            .baseUrl("https://www.superheroapi.com")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 
     private fun enableDarkModeActionBar() {
         val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
@@ -42,6 +67,7 @@ class DetailSuperHeroActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun changeNameActionBar(name: String) {
         supportActionBar?.title = name
     }
