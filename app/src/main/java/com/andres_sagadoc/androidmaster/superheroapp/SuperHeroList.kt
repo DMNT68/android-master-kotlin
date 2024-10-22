@@ -1,26 +1,29 @@
 package com.andres_sagadoc.androidmaster.superheroapp
 
+import android.content.res.Configuration
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.andres_sagadoc.androidmaster.R
 import com.andres_sagadoc.androidmaster.databinding.ActivitySuperHeroListBinding
-import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 class SuperHeroList : AppCompatActivity() {
     private lateinit var binding: ActivitySuperHeroListBinding
     private lateinit var retrofit: Retrofit
+
+    private lateinit var superHeroAdapter: SuperHeroAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,16 +52,30 @@ class SuperHeroList : AppCompatActivity() {
 
             override fun onQueryTextChange(p0: String?): Boolean = false
         })
+
+        superHeroAdapter = SuperHeroAdapter()
+        binding.rvSuperHero.setHasFixedSize(true)
+        binding.rvSuperHero.layoutManager = LinearLayoutManager(this)
+        binding.rvSuperHero.adapter = superHeroAdapter
     }
 
     private fun searchByName(query: String) {
+        binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
             val myResponse: Response<SuperHeroDataResponse> =
                 retrofit.create(ApiService::class.java).getSuperHeros(query)
             if (myResponse.isSuccessful) {
-                Log.i("andres", "Funciona :)")
+                val response: SuperHeroDataResponse? = myResponse.body()
+                if (response != null) {
+                    runOnUiThread {
+                        superHeroAdapter.updateList(response.superHeros)
+                    }
+                }
             } else {
                 Log.i("andres", "No funciona :(")
+            }
+            runOnUiThread {
+                binding.progressBar.isVisible = false
             }
         }
     }
