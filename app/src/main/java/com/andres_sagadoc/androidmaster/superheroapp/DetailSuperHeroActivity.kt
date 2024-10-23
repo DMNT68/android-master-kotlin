@@ -5,6 +5,7 @@ import android.util.TypedValue
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.andres_sagadoc.androidmaster.databinding.ActivityDetailSuperHeroBinding
 import com.andres_sagadoc.androidmaster.superheroapp.SuperHeroList.Companion.ID_SUPER_HERO
 import com.squareup.picasso.Picasso
