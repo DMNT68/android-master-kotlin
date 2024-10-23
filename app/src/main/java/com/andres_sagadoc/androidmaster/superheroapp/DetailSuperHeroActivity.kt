@@ -31,6 +31,7 @@ class DetailSuperHeroActivity : AppCompatActivity() {
     }
 
     private fun getSuperHeroInformation(id: String) {
+        binding.pbDetailSuperHero.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
             val superHeroDetail: Response<SuperHeroDetailResponse> =
                 getRetrofit().create(ApiService::class.java).getSuperHeroDetail(id)
@@ -38,6 +39,10 @@ class DetailSuperHeroActivity : AppCompatActivity() {
                 runOnUiThread {
                     createUI(superHeroDetail.body()!!)
                 }
+            }
+            runOnUiThread {
+                binding.pbDetailSuperHero.isVisible = false
+                binding.detailSuperHero.isVisible = true
             }
         }
     }
