@@ -68,7 +68,8 @@ class DetailSuperHeroActivity : AppCompatActivity() {
 
     private fun updateHeight(view: View, stat: String) {
         val params = view.layoutParams
-        params.height = pxToDp(stat.toFloat())
+        val statValid = if(stat == "null") "1" else stat
+        params.height = pxToDp(statValid.toFloat())
         view.layoutParams = params
     }
 
