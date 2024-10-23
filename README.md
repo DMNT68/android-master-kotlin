@@ -1,13 +1,13 @@
 # Android con kotlin
 
 - ## Fundamentos:
-    - Valores, Variables y Tipos
-    - Funciones
-    - If Else When
-    - Arrays
-    - ListasonItemTaskSelected
+  - Valores, Variables y Tipos
+  - Funciones
+  - If Else When
+  - Arrays
+  - ListasonItemTaskSelected
 - ## Ejercicios
-- ## Apps: 
+- ## Apps:
     <img src="docs/captures/menu.png" alt="Pantalla principal" height="500">
    
     - ### SALUDAPP 
@@ -18,3 +18,6 @@
     
     - ### TODO App 
         <img src="docs/captures/todo.png" alt="Pantalla imc app" height="500">
+    
+    - ### Super Hero App 
+        <img src="docs/captures/superHeroApp.png" alt="Pantalla imc app" height="500"> <img src="docs/captures/detailSuperHero.png" alt="Pantalla imc app" height="500">
