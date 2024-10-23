@@ -46,4 +46,12 @@
     <string name="hint_name">Pulsa para escribir</string>
     <string name="superHeroList">Super Heroes</string>
     <string name="detail_superhero">Detalle super heroe</string>
+
+    <!--- Super hero APP -->
+    <string name="superhero_stats_intelligence">Inteligencia</string>
+    <string name="superhero_stats_strength">Fuerza</string>
+    <string name="superhero_stats_speed">Velocidad</string>
+    <string name="superhero_stats_durability">Durabilidad</string>
+    <string name="superhero_stats_power">Poder</string>
+    <string name="superhero_stats_combat">Combate</string>
 </resources>
