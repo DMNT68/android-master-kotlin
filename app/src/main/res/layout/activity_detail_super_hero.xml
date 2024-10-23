@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/ivSuperHero"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="350dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="320dp"
         android:layout_marginBottom="-30dp"
         app:cardBackgroundColor="@color/background_component"
         app:cardCornerRadius="22dp"
