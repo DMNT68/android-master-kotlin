@@ -34,4 +34,8 @@
     <color name="superhero_stat_power">#9C27B0</color>
     <color name="superhero_stat_combat">#FF6F00</color>
 
+    <!-- Settings app -->
+    <color name="settings_switch_thumb_tint">@color/purple_200</color>
+    <color name="settings_switch_track_tint">#D2C9FF</color>
+
 </resources>

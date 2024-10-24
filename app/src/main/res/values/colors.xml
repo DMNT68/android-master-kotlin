@@ -13,7 +13,7 @@
     <color name="background_component_selected">#DBD4FF</color>
     <color name="background_app">#FFFFFF</color>
     <color name="background_button">#FF4081</color>
-    <color name="title_text">#FF212121</color>
+    <color name="title_text">#6A6A6A</color>
     <color name="background_btn">@color/purple_500</color>
     <color name="text_btn">@color/white</color>
     <color name="text">@color/black</color>
@@ -45,5 +45,8 @@
     <color name="superhero_stat_power">#7B1FA2</color>
     <color name="superhero_stat_combat">#E65100</color>
 
+    <!-- Settings app -->
+    <color name="settings_switch_thumb_tint" >@color/purple_500</color>
+    <color name="settings_switch_track_tint">#A695FB</color>
 
 </resources>
