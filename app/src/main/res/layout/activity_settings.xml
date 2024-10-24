@@ -21,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:contentDescription="@string/dark_mode"
-            android:src="@drawable/ic_darkmode" />
+            android:src="@drawable/ic_darkmode"
+            app:tint="@color/title_text" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -33,13 +34,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dark_mode"
-                android:textColor="@color/text" />
+                android:textColor="@color/text"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description_mode_dark"
-                android:textSize="11sp" />
+                android:textColor="@color/title_text"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -47,9 +50,7 @@
             android:id="@+id/switchDarMode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:thumbTint="@color/background_btn"
-            android:trackTint="@color/background_btn" />
+            android:layout_marginHorizontal="16dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,7 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:contentDescription="@string/bluetooth"
-            android:src="@drawable/ic_bluetooth" />
+            android:src="@drawable/ic_bluetooth"
+            app:tint="@color/title_text" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -76,13 +78,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bluetooth"
-                android:textColor="@color/text" />
+                android:textColor="@color/text"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/description_bluetooth"
-                android:textSize="11sp" />
+                android:textColor="@color/title_text"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -90,9 +94,7 @@
             android:id="@+id/switchBluetooth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:thumbTint="@color/background_btn"
-            android:trackTint="@color/background_btn" />
+            android:layout_marginHorizontal="16dp" />
     </LinearLayout>
 
     <com.google.android.material.divider.MaterialDivider
@@ -113,7 +115,7 @@
             android:layout_margin="16dp"
             android:contentDescription="@string/dark_mode"
             android:src="@drawable/ic_volume"
-            app:tint="#555555" />
+            app:tint="@color/title_text" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -125,7 +127,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/volume"
-                android:textColor="@color/text" />
+                android:textColor="@color/text"
+                android:textSize="16sp" />
 
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/rsVolumen"
@@ -152,23 +155,23 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:contentDescription="@string/vibration"
-            android:src="@drawable/ic_vibration" />
+            android:src="@drawable/ic_vibration"
+            app:tint="@color/title_text" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/vibration"
-            android:textColor="@color/text" />
+            android:textColor="@color/text"
+            android:textSize="16sp" />
 
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/switchVibration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:thumbTint="@color/background_btn"
-            android:trackTint="@color/background_btn" />
+            android:layout_marginHorizontal="16dp" />
     </LinearLayout>
 
     <com.google.android.material.divider.MaterialDivider
