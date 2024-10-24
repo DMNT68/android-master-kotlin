@@ -1,10 +1,16 @@
 package com.andres_sagadoc.androidmaster.settings
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.res.Configuration
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.datastore.core.DataStore
@@ -69,6 +75,45 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
         initUI()
+        initSwitches()
+    }
+
+    private fun initSwitches() {
+        // Definir ColorStateList para el thumb
+        val thumbColorStateList = ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_checked),  // Estado activado (true)
+                intArrayOf(-android.R.attr.state_checked)  // Estado desactivado (false)
+            ),
+            intArrayOf(
+                ContextCompat.getColor(
+                    this,
+                    R.color.settings_switch_thumb_tint
+                ),  // Cuando está activado
+                Color.parseColor("#BDBDBD")   // Cuando está desactivado
+            )
+        )
+        binding.switchBluetooth.thumbTintList = thumbColorStateList
+        binding.switchVibration.thumbTintList = thumbColorStateList
+        binding.switchDarMode.thumbTintList = thumbColorStateList
+
+// Definir ColorStateList para el track
+        val trackColorStateList = ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_checked),  // Estado activado (true)
+                intArrayOf(-android.R.attr.state_checked)  // Estado desactivado (false)
+            ),
+            intArrayOf(
+                ContextCompat.getColor(
+                    this,
+                    R.color.settings_switch_track_tint
+                ),  // Verde cuando está activado
+                Color.parseColor("#E0E0E0")   // Gris claro cuando está desactivado
+            )
+        )
+        binding.switchBluetooth.trackTintList = trackColorStateList
+        binding.switchVibration.trackTintList = trackColorStateList
+        binding.switchDarMode.trackTintList = trackColorStateList
     }
 
     private fun initUI() {
@@ -89,6 +134,8 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
         binding.switchDarMode.setOnCheckedChangeListener { _, value ->
+            if (value) enableDarkMode()
+            else disableDarkMode()
             CoroutineScope(Dispatchers.IO).launch {
                 saveOptions(KEY_DARK_MODE, value)
             }
@@ -118,6 +165,14 @@ class SettingsActivity : AppCompatActivity() {
 
                 )
         }
+    }
+
+    private fun enableDarkMode() {
+        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
+    }
+
+    private fun disableDarkMode() {
+        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
     }
 
     private fun enableDarkModeActionBar() {
