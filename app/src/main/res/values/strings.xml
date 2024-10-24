@@ -54,4 +54,13 @@
     <string name="superhero_stats_durability">Durabilidad</string>
     <string name="superhero_stats_power">Poder</string>
     <string name="superhero_stats_combat">Combate</string>
+
+    <!--- Settings -->
+    <string name="settings">Configuraciones</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="description_mode_dark">Activa el modo oscuro para mejorar visual</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="description_bluetooth">Conecta periféricos sin cables</string>
+    <string name="vibration">Vibrar para las llamada</string>
+    <string name="volume">Volumen</string>
 </resources>
