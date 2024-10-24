@@ -45,8 +45,11 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
 
-    //picasso
+    // Picasso
     implementation(libs.picasso)
+
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
 
 
     implementation(libs.androidx.core.ktx)
