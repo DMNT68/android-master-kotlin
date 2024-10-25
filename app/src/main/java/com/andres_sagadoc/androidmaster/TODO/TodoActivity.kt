@@ -25,13 +25,6 @@ class TodoActivity : AppCompatActivity() {
         Other
     )
 
-    private val radioCategories: List<TaskCategory> = listOf(
-        Business,
-        Personal,
-        Work,
-        Other
-    )
-
     private var tasks = mutableListOf<Task>(
         Task("Personal", Personal, false),
         Task("Trabajo 8 a 5", Work, false),
@@ -85,7 +78,7 @@ class TodoActivity : AppCompatActivity() {
        // val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
         val rvRadiosTaskCategoy: RecyclerView = dialog.findViewById(R.id.rvRadiosTaskCategoy)
 
-        radioCategoriesAdapter = RadioTaskCategoryAdapter(radioCategories)
+        radioCategoriesAdapter = RadioTaskCategoryAdapter(categories)
 
         rvRadiosTaskCategoy.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
