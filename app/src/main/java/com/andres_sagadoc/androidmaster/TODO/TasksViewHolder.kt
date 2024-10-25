@@ -16,13 +16,13 @@ class TasksViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun render(task: Task) {
         tvTask.text = task.name
-        if (task.isSelected) {
-            tvTask.paintFlags = tvTask.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-        } else {
-            tvTask.paintFlags = tvTask.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
-        }
+        setPaintFlagsTask(task)
 
         cbTask.isChecked = task.isSelected
+
+        cbTask.setOnClickListener {
+            setPaintFlagsTask(task)
+        }
 
         when (task.category) {
             TaskCategory.Business -> cbTask.buttonTintList = ColorStateList.valueOf(
@@ -53,6 +53,15 @@ class TasksViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                     R.color.todo_work_category
                 )
             )
+        }
+    }
+
+    private fun setPaintFlagsTask(task: Task) {
+        if (task.isSelected) {
+            tvTask.paintFlags = tvTask.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+
+        } else {
+            tvTask.paintFlags = tvTask.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
         }
     }
 }
