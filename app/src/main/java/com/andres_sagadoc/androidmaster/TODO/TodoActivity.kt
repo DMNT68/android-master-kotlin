@@ -4,7 +4,6 @@ import android.app.Dialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,6 +20,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class TodoActivity : AppCompatActivity() {
 
     private val categories = listOf(
+        Business,
+        Personal,
+        Work,
+        Other
+    )
+
+    private val radioCategories: List<TaskCategory> = listOf(
         Business,
         Personal,
         Work,
@@ -47,6 +53,7 @@ class TodoActivity : AppCompatActivity() {
 
     private lateinit var categoriesAdapter: CategoriesAdapter
     private lateinit var tasksAdapter: TasksAdapter
+    private lateinit var radioCategoriesAdapter: RadioTaskCategoryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,20 +83,30 @@ class TodoActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.dialog_task)
         val etTask: EditText = dialog.findViewById(R.id.etTask)
         val btnAddTask: Button = dialog.findViewById(R.id.btnAddTask)
-        val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
+       // val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
+        var rvRadiosTaskCategoy: RecyclerView = dialog.findViewById(R.id.rvRadiosTaskCategoy)
+
+        radioCategoriesAdapter = RadioTaskCategoryAdapter(radioCategories)
+
+        rvRadiosTaskCategoy.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        rvRadiosTaskCategoy.adapter = radioCategoriesAdapter
 
         btnAddTask.setOnClickListener {
             val currentTask = etTask.text.toString()
-            if (currentTask.isNotEmpty()) {
-                val selectedId = rgCategories.checkedRadioButtonId
-                val seletedRadioButton: RadioButton = rgCategories.findViewById(selectedId)
-                val currenteCategory: TaskCategory = when (seletedRadioButton.text) {
-                    getString(R.string.todo_business) -> Business
-                    getString(R.string.todo_personal) -> Personal
-                    getString(R.string.todo_work) -> Work
-                    else -> Other
-                }
-                tasks.add(0, Task(currentTask, currenteCategory, false))
+            val radioSelected: TaskCategory? = radioCategoriesAdapter.getSelectedOption()
+
+            if (currentTask.isNotEmpty() && radioSelected != null) {
+                // val selectedId = rgCategories.checkedRadioButtonId
+                // val seletedRadioButton: RadioButton = rgCategories.findViewById(selectedId)
+//                val currenteCategory: TaskCategory = when (seletedRadioButton.text) {
+//                    getString(R.string.todo_business) -> Business
+//                    getString(R.string.todo_personal) -> Personal
+//                    getString(R.string.todo_work) -> Work
+//                    else -> Other
+//                }
+                tasks.add(0, Task(currentTask, radioSelected, false))
                 updateTasks(0)
                 etTask.text.clear()
                 dialog.hide()

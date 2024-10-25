@@ -23,6 +23,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRadiosTaskCategoy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+<!--
         <RadioButton
             android:id="@+id/rbBusiness"
             android:layout_width="match_parent"
@@ -55,6 +60,7 @@
             android:buttonTint="@color/todo_other_category"
             android:text="@string/todo_other"
             android:textColor="@color/text" />
+-->
     </RadioGroup>
 
     <Button
