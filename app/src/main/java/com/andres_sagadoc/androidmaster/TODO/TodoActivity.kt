@@ -4,7 +4,6 @@ import android.app.Dialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -84,7 +83,7 @@ class TodoActivity : AppCompatActivity() {
         val etTask: EditText = dialog.findViewById(R.id.etTask)
         val btnAddTask: Button = dialog.findViewById(R.id.btnAddTask)
        // val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
-        var rvRadiosTaskCategoy: RecyclerView = dialog.findViewById(R.id.rvRadiosTaskCategoy)
+        val rvRadiosTaskCategoy: RecyclerView = dialog.findViewById(R.id.rvRadiosTaskCategoy)
 
         radioCategoriesAdapter = RadioTaskCategoryAdapter(radioCategories)
 
