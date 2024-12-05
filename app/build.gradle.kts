@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.andres_sagadoc.androidmaster"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.andres_sagadoc.androidmaster"
